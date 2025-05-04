@@ -1,6 +1,6 @@
 # Giordano App
 
-Benvenuto in **Giordano App**, una web dashboard responsive e moderna che raccoglie tutti i tuoi progetti in un unico posto. Pensata per essere elegante, dark-themed, con rifiniture giallo ocra e ottimizzata per dispositivi mobili.
+Benvenuto in **Giordano App**, una web dashboard responsive e moderna che raccoglie tutti i miei progetti in un unico posto. Pensata per essere elegante, dark-themed, con rifiniture giallo ocra e ottimizzata per dispositivi mobili.
 
 > 🔗 Visualizza online: [Giordano App - GitHub Pages](https://tuo-username.github.io/giordano-app/)
 
