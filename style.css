@@ -1,0 +1,163 @@
+/* style.css */
+
+/* Colori principali */
+:root {
+  --bg-color: #121212;
+  --accent-color: #c9a227; /* Giallo ocra */
+  --text-color: #f0f0f0;
+  --button-bg: #1e1e1e;
+  --button-hover: #2c2c2c;
+}
+
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Impostazioni generali */
+/* style.css */
+
+/* ... (tutto il CSS precedente rimane invariato fino a body) ... */
+
+/* Impostazioni generali */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Aggiungi questo nuovo contenitore principale */
+.main-content {
+  flex: 1; /* Occupa tutto lo spazio disponibile */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modifica il links-container per usare lo spazio disponibile */
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1; /* Occupa lo spazio rimanente */
+}
+
+/* Footer - aggiungi margin-top: auto */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: auto; /* Spinge il footer in fondo */
+}
+
+/* ... (il resto del CSS rimane invariato) ... */
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Contenitore dei link */
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+/* Stile dei pulsanti */
+.project-link {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s;
+   /* Mantiene la forma rettangolare */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-link:active {
+  transform: scale(0.95); /* effetto pop */
+}
+
+.project-link:hover {
+  background-color: var(--button-hover);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .links-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne su schermi medi */
+  }
+}
+
+@media (max-width: 480px) {
+  .links-container {
+    grid-template-columns: 1fr; /* 1 colonna su mobile */
+  }
+}
+
+/* Aggiungi questo in fondo al file style.css */
+.project-link.popped {
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+}
+
+#prossimamente {
+  text-align: center;
+  font-size: 1.2rem; /* Dimensione ridotta per mobile */
+  color: rgba(255, 255, 255, 0.7);
+  margin: 1.5rem auto; /* Margini ridotti */
+  padding: 0.6rem 1.2rem; /* Padding ridotto */
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.02em; /* Spaziatura leggermente ridotta */
+  border-radius: 6px;
+  background-color: rgba(30, 30, 30, 0.3);
+  backdrop-filter: blur(4px);
+  max-width: 90%; /* Larghezza massima aumentata per mobile */
+  border: 1px solid #c9a227;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Stack di font ottimizzato per mobile */
+  word-break: keep-all; /* Evita a capi indesiderati */
+}
+
+/* Media query per schermi molto piccoli */
+@media (max-width: 400px) {
+  #prossimamente {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      margin: 1rem auto;
+  }
+}
+
+/* Media query per orientamento landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+  #prossimamente {
+      margin: 0.8rem auto;
+      font-size: 1rem;
+  }
+}
